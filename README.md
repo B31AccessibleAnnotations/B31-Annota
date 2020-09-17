@@ -56,8 +56,8 @@ Reserved space for launching script.
 
 ## Contacts
 
-- Philippe G.
 - Rikki R.
+- Philippe G.
 - Daanish K.
 - Bjorn V.
 - Jodi Q.
