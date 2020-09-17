@@ -65,4 +65,5 @@ Reserved space for launching script.
 ## Misc
 
 [GitHub Markdown Emojis](https://gist.github.com/rxaviers/7360908) :bowtie:
+
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
