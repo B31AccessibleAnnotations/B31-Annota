@@ -9,7 +9,7 @@ Introductory paragraph. For project planning, please see *Projects* tab.
 
 ## Highlighted features (accessibility)
 
-- [ ] Feature 1
+- [ ] Feature 1 :two_hearts:
 - [ ] Feature 2
 - [ ] Feature 3
 
@@ -47,12 +47,12 @@ Reserved space for launching script.
 1. `git clone {repo link}` Repository link.
 1. `git status` To check the status of your git.
 1. `git checkout -b {student name/branch name}` Please follow this format when creating branches.
-1. Make your changes.
+1. Make your changes. :shipit:
 1. `git add .` or `git add -A` Dot adds all files, whereas -A adds all changes including deletions (choose your own adventure). `git add {filename}` Adds specific files.
 1. `git commit -m` Followed with descriptive commit message in quotation marks, ex. `git commit -m "jodi changed default font"`.
 1. `git pull origin {branch name}` Pull often to stay updated.
 
-**For files such as .DS_Store, feel free to add it to .gitignore so we don't include every random thing in the project repo. Alternatively, add and commit specific filenames.**
+:exclamation: **For files such as .DS_Store, feel free to add it to .gitignore so we don't include every random thing in the project repo. Alternatively, add and commit specific filenames.**
 
 ## Contacts
 
@@ -61,3 +61,7 @@ Reserved space for launching script.
 - Daanish K.
 - Bjorn V.
 - Jodi Q.
+
+## Misc
+
+[GitHub Markdown Emojis](https://gist.github.com/rxaviers/7360908) :bowtie:
