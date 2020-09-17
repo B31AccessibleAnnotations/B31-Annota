@@ -52,6 +52,7 @@ Reserved space for launching script.
 1. `git commit -m` Followed with descriptive commit message in quotation marks, ex. `git commit -m "jodi changed default font"`.
 1. `git pull origin {branch name}` Pull often to stay updated.
 
+**For files such as .DS_Store, feel free to add it to .gitignore so we don't include every random thing in the project repo. Alternatively, add and commit specific filenames.**
 
 ## Contacts
 
