@@ -21,14 +21,16 @@ Reserved space for launching script.
 
 ## Git quick-start
 
-Useful links:
+### Useful links:
+
 - [GitHub Guides (~10 minute reads)](https://guides.github.com)
 - [StackExchange answer on how to keep your local branch updated](https://superuser.com/questions/224085/git-merge-master-into-a-branch)
 - [GitHub Desktop, for people who really hate the command prompt](https://desktop.github.com)
 - [Pull Request](https://www.boldgrid.com/support/wordpress-tutorials/how-to-create-a-pull-request-on-a-github-repository/)
 - [GitHub Cheatsheet from SEG2105](github-info/github-git-cheat-sheet.pdf)
 
-Bread-and-butter workflow (? not sure if useful):
+### Bread-and-butter workflow (? not sure if useful):
+
 1. Jack and Jill wants to work on a project together in GitHub.
 1. They clone the master repo to their local machines.
 1. They split up the work so that they don't work on the same files at the same time (otherwise it's a nightmare when merging).
@@ -40,7 +42,7 @@ Bread-and-butter workflow (? not sure if useful):
 1. Once merged/resolved, Jack visits the project Kanban to make sure the issue card is in the correct swim lane.
 1. Rinse and repeat with small variations (if all goes well).
 
-Basic shell scripts:
+### Basic shell scripts:
 
 1. `git clone {repo link}` Repository link.
 1. `git status` To check the status of your git.
