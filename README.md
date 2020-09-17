@@ -55,6 +55,8 @@ Basic shell scripts:
 1. `git commit -m` Followed with descriptive commit message in quotation marks, ex. `git commit -m "jodi changed default font"`.
 1. `git pull origin {branch name}` Pull often to stay updated.
 
+**PS: try to add and commit specific files you've changed, and leave out things like .DS_Store; use gitignore if you know how to**
+
 
 #### Contacts
 ***
