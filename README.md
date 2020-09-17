@@ -1,24 +1,30 @@
 # GNG2101 B31 Smart Annotations Compliation
+***
+
 (temporary name until we've got something we're proud of enough to have a name)
 
-#### Introduction
+### Introduction
+***
 
 Introductory paragraph. For project planning, please see *Projects* tab.
 
 
-#### Highlighted features (accessibility)
+### Highlighted features (accessibility)
+***
 
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
 
 
-#### Testing and running
+### Testing and running
+***
 
 Reserved space for launching script.
 
 
-#### Git quick-start
+### Git quick-start
+***
 
 Useful links:
 - [GitHub Guides (~10 minute reads)](https://guides.github.com)
@@ -51,6 +57,7 @@ Basic shell scripts:
 
 
 #### Contacts
+***
 
 - Philippe G.
 - Rikki R.
