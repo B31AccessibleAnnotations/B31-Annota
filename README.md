@@ -10,8 +10,8 @@ Introductory paragraph. For project planning, please see *Projects* tab.
 ## Highlighted features (accessibility)
 
 - [ ] Feature 1 :two_hearts:
-- [ ] Feature 2
-- [ ] Feature 3
+- [ ] Feature 2 :sparkling_heart:
+- [ ] Feature 3 :revolving_hearts:
 
 
 ## Testing and running
