@@ -7,12 +7,9 @@
 Introductory paragraph. For project planning, please see *Projects* tab.
 
 
-## Highlighted features (accessibility)
+## Highlighted features (Deliverable B Final Specs :revolving_hearts:)
 
-- [ ] Feature 1 :two_hearts:
-- [ ] Feature 2 :sparkling_heart:
-- [ ] Feature 3 :revolving_hearts:
-
+![Final Specs Table](assets/final_specs.png)
 
 ## Testing and running
 
