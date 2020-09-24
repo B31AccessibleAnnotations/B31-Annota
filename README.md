@@ -1,7 +1,7 @@
 # GNG2101 B31 Smart Annotations Compliation
 
 :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness:
-:mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness:
+:mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip:
 
 
 ## Introduction
