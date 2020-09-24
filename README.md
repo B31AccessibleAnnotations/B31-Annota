@@ -16,8 +16,24 @@ Introductory paragraph. For project planning, please see *Projects* tab.
 
 ## Testing and running
 
-Reserved space for launching script.
+**Basic** start option: run the Flask app from a Python virtual environment
+```{bash}
+  cd gng2101-proj                   # Navigate to folder
+  python3 -m venv env               # Make virtual environment
+  source env/bin/activate           # Start virtual environment
+  pip install -r requirements.txt   # Install Python requirements into virtual env
+  python app.py                     # Run the app
 
+```
+
+**Big Hammer** start option: no virtual environment, just run the app and install all packages locally
+```{bash}
+  cd gng2101-proj                   # Navigate to folder
+  python app.py                     # Run the app and just install everything it errors out on
+
+```
+
+With slight variations between different workspaces, ex. Windows/Linux command line script may differ slightly.
 
 ## Git quick-start
 
