@@ -33,7 +33,29 @@ A discourse analysis, the study of written or spoken language in relation to its
 
 ```
 
-With slight variations between different workspaces, ex. Windows/Linux command line script may differ slightly.
+:exclamation: If you import any libraries/install anything in the virtual environment and want to capture its state so the next user can have the same settings, use:
+
+```{bash}
+  python -m pip freeze > requirements.txt
+
+```
+
+With slight variations between different workspaces, ex. Windows/Linux command line script may differ slightly. After you see similar text to the below:
+
+```{bash}
+  (env) (base) Kurama:app diqiao$ python app.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+
+```
+
+Go to `localhost:5000` in your browser to view the app. 
 
 
 ## Git quick-start
