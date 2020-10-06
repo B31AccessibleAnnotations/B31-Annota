@@ -1,22 +1,61 @@
-# GNG2101 B31 Smart Annotations Compliation
+# GNG2101 B31 - Annota
 
-(temporary name until we've got something we're proud of enough to have a name)
+:mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness:
+:mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip:
+
 
 ## Introduction
 
-Introductory paragraph. For project planning, please see *Projects* tab.
+A discourse analysis, the study of written or spoken language in relation to its social context, requires taking notes and putting annotations in documents and images to be able to analyze the data. The client for this project, Roksolana McVicar a second year Masters student with a disability and chronic illness, is seeking to perform a discourse analysis of a government bill for her research, but she is not always capable of remembering the documents and what ties the have to other pieces of information. The purpose of this project is to create a way for her to keep a visual timeline of all the annotated and reviewed documents and how the information might flow from one to another.
 
 
-## Highlighted features (accessibility)
+## Highlighted features (Deliverable B Final Specs :revolving_hearts:)
 
-- [ ] Feature 1 :two_hearts:
-- [ ] Feature 2 :sparkling_heart:
-- [ ] Feature 3 :revolving_hearts:
+![Final Specs Table](assets/final_specs.png)
 
 
 ## Testing and running
 
-Reserved space for launching script.
+**Basic** start option: run the Flask app from a Python virtual environment
+```{bash}
+  cd gng2101-proj                   # Navigate to folder
+  python3 -m venv env               # Make virtual environment
+  source env/bin/activate           # Start virtual environment
+  pip install -r requirements.txt   # Install Python requirements into virtual env
+  python app.py                     # Run the app
+
+```
+
+**Big Hammer** start option: no virtual environment, just run the app and install all packages locally
+```{bash}
+  cd gng2101-proj                   # Navigate to folder
+  python app.py                     # Run the app and just install everything it errors out on
+
+```
+
+:exclamation: If you import any libraries/install anything in the virtual environment and want to capture its state so the next user can have the same settings, use:
+
+```{bash}
+  python -m pip freeze > requirements.txt
+
+```
+
+With slight variations between different workspaces, ex. Windows/Linux command line script may differ slightly. After you see similar text to the below:
+
+```{bash}
+  (env) (base) Kurama:app diqiao$ python app.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+
+```
+
+Go to `localhost:5000` in your browser to view the app. 
 
 
 ## Git quick-start
@@ -55,6 +94,7 @@ Reserved space for launching script.
 
 :exclamation: **For files such as .DS_Store, feel free to add it to .gitignore so we don't include every random thing in the project repo. Alternatively, add and commit specific filenames.**
 
+
 ## Contacts
 
 - Rikki R.
@@ -62,6 +102,7 @@ Reserved space for launching script.
 - Daanish K.
 - Bjorn V.
 - Jodi Q.
+
 
 ## Misc
 
