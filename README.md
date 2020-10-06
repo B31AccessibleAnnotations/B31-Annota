@@ -28,6 +28,7 @@ Reserved space for launching script.
 - [GitHub Desktop, for people who really hate the command prompt](https://desktop.github.com)
 - [Pull Request](https://www.boldgrid.com/support/wordpress-tutorials/how-to-create-a-pull-request-on-a-github-repository/)
 - [GitHub Cheatsheet from SEG2105](github-info/github-git-cheat-sheet.pdf)
+- [Mana's GitHub Cheatsheet](git-cheat-sheet-education.pdf)
 
 ### Bread-and-butter workflow (? not sure if useful):
 
@@ -67,3 +68,4 @@ Reserved space for launching script.
 [GitHub Markdown Emojis](https://gist.github.com/rxaviers/7360908) :bowtie:
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
+
