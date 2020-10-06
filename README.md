@@ -29,6 +29,7 @@ A discourse analysis, the study of written or spoken language in relation to its
 **Big Hammer** start option: no virtual environment, just run the app and install all packages locally
 ```{bash}
   cd gng2101-proj                   # Navigate to folder
+  cd app                            # Navigate to app folder
   python app.py                     # Run the app and just install everything it errors out on
 
 ```
