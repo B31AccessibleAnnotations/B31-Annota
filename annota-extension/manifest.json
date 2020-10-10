@@ -1,0 +1,14 @@
+{
+    "name": "Annota",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "128": "annota-logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["file://*/*.pdf"],
+            "js": ["activities.js"]
+        }
+    ]
+}
