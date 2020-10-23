@@ -6,7 +6,7 @@
 
 ## Introduction
 
-bjorn A discourse analysis, the study of written or spoken language in relation to its social context, requires taking notes and putting annotations in documents and images to be able to analyze the data. The client for this project, Roksolana McVicar a second year Masters student with a disability and chronic illness, is seeking to perform a discourse analysis of a government bill for her research, but she is not always capable of remembering the documents and what ties the have to other pieces of information. The purpose of this project is to create a way for her to keep a visual timeline of all the annotated and reviewed documents and how the information might flow from one to another.
+A discourse analysis, the study of written or spoken language in relation to its social context, requires taking notes and putting annotations in documents and images to be able to analyze the data. The client for this project, Roksolana McVicar a second year Masters student with a disability and chronic illness, is seeking to perform a discourse analysis of a government bill for her research, but she is not always capable of remembering the documents and what ties the have to other pieces of information. The purpose of this project is to create a way for her to keep a visual timeline of all the annotated and reviewed documents and how the information might flow from one to another.
 
 
 ## Highlighted features (Deliverable B Final Specs :revolving_hearts:)
@@ -69,6 +69,9 @@ Go to `localhost:5000` in your browser to view the app.
 - [Pull Request](https://www.boldgrid.com/support/wordpress-tutorials/how-to-create-a-pull-request-on-a-github-repository/)
 - [GitHub Cheatsheet from SEG2105](github-info/github-git-cheat-sheet.pdf)
 - [Mana's GitHub Cheatsheet](git-cheat-sheet-education.pdf)
+
+- [Branching with GitHub](https://gist.github.com/blackfalcon/8428401)
+- [Google Chrome Extention Docs](https://developer.chrome.com/extensions/getstarted)
 
 ### Bread-and-butter workflow (? not sure if useful):
 
