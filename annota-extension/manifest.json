@@ -2,7 +2,7 @@
     "name": "Annota",
     "version": "1.0",
     "description": "Annotation Orginization System.",
-    "permissions": ["storage", "contextMenus", "tabs", "*://*/*", "fileSystem"],
+    "permissions": ["storage", "contextMenus", "tabs", "*://*/*"],
     "manifest_version": 2,
     "browser_action": {
       "default_icon": {
