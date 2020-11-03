@@ -2,7 +2,7 @@
     "name": "Annota",
     "version": "1.0",
     "description": "Annotation Orginization System.",
-    "permissions": ["storage", "contextMenus"],
+    "permissions": ["storage", "contextMenus", "tabs", "*://*/*", "fileSystem"],
     "manifest_version": 2,
     "browser_action": {
       "default_icon": {
@@ -20,9 +20,9 @@
       "persistent": false
     },
     "content_scripts": [
-        {
-            "matches": ["file://*/*.pdf"],
-            "js": ["activities.js"]
-        }
+
+    ],
+    "web_accessible_resources": [
+      "overlay/overlay.html"
     ]
 }
