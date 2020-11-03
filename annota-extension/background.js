@@ -1,3 +1,4 @@
+// Enable/Disable state of the extension
 var state = true;
 
 // Command icon for Mac/Windows
@@ -99,6 +100,14 @@ chrome.contextMenus.onClicked.addListener(function(info) {
       chrome.contextMenus.update("annotate", {"visible": false});
 
     }
+
+  }
+
+  if (info.menuItemId == "annotate") {
+
+    chrome.tabs.executeScript({
+      file: "overlay/overlay-creation.js"
+    });
 
   }
 
