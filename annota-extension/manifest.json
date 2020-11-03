@@ -10,7 +10,7 @@
       }
     },
     "chrome_url_overrides": {
-      "newtab": "templates/index.html"
+      "newtab": "app/templates/index.html"
     },
     "icons": {
         "128": "annota-logo.png"
