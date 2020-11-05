@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/diqiao/Documents/github/gng2101-proj/app/env"
+set -gx VIRTUAL_ENV "/Users/diqiao/Documents/github/B31-Annota/annota-extension/app/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
