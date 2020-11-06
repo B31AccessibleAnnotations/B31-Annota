@@ -28,10 +28,18 @@
             <div class="col">
                 <div id="functional" alt="Navigation and functionality sidebar">
                     <div class="row">
-                        <div class="col"><a accesskey="m" href="/mapview"><img alt="Clickable icon with connections and node for Mapview functionality" class="icon" src="static/img/mapview.png"></a></div>
+                        <div class="col">
+                            <a accesskey="m" href="/mapview" data-toggle="tooltip" data-placement="top" title="Mapview">
+                                <img alt="Clickable icon with connections and node for Mapview functionality" class="icon" src="static/img/mapview.png">
+                            </a>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col"><a accesskey="t" href="/timeline"><img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png"></a></div>
+                        <div class="col">
+                            <a accesskey="t" href="/timeline" data-toggle="tooltip" data-placement="top" title="Timeline">
+                                <img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,10 +76,18 @@
                 <!--Issue with the wave graphics blocking these buttons -->
                 <div id="settings-off" style="bottom: auto!important" alt="Settings and doze toggle sidebar">
                     <div class="row">
-                        <div class="col"><a accesskey="s" href="/settings"><img alt="Clickable icon in the shape of a gear for application settings" class="icon" src="static/img/settings.png"></a></div>
+                        <div class="col">
+                            <a accesskey="s" href="/settings" data-toggle="tooltip" data-placement="top" title="Settings">
+                                <img alt="Clickable icon in the shape of a gear for application settings" class="icon" src="static/img/settings.png">
+                            </a>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col"><a accesskey="d" href="#"><img alt="Clickable icon with moon and stars for dozing Annota" class="icon" src="static/img/doze.png"></a></div>
+                        <div class="col">
+                            <a accesskey="d" href="#" data-toggle="tooltip" data-placement="top" title="Doze">
+                                <img alt="Clickable icon with moon and stars for dozing Annota" class="icon" src="static/img/doze.png">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,7 +95,7 @@
     </div><img class="graphics blobs" src="static/img/blobs.png"><img class="graphics wave lighter-wave" src="static/img/wave1.png"><img class="graphics wave darker-wave" src="static/img/wave2.png">
     <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js') }}"></script>
-
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 
 </html>
