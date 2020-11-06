@@ -72,11 +72,15 @@ function addContextListener() {
     }
 
     if (info.menuItemId == "annotate") {
-
       chrome.tabs.executeScript({
         file: "overlay/overlay-creation.js"
       });
+    }
 
+    if (info.menuItemId == "help") {
+      chrome.tabs.create({
+        url: chrome.extension.getURL('help/readme.html')
+      });
     }
 
   });

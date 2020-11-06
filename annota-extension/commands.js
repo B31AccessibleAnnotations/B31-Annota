@@ -10,7 +10,9 @@ chrome.commands.onCommand.addListener(function(command) {
       if (!state) window.postMessage("updateState", "*");
       break;
     case "help":
-      chrome.tabs.create({url: chrome.extension.getURL('help/readme.html')});
+      chrome.tabs.create({
+        url: chrome.extension.getURL('help/readme.html')
+      });
       break;
     case "addToAnnota":
       chrome.tabs.executeScript({
