@@ -74,7 +74,7 @@ function addContextListener() {
       window.postMessage("updateState", "*");
     }
 
-    if (info.menuItemId == "annotate") {
+    if (info.menuItemId == "annotate" || info.menuItemId == "addToAnnota") {
       chrome.tabs.executeScript({
         file: "overlay/overlay-creation.js"
       });
@@ -92,13 +92,14 @@ function addContextListener() {
 
 function updateState(event) {
 
-  // Get state of extension from storage
-  state = (window.localStorage.getItem("state") == true);
-
-  // Get command icon type from storage
-  command = window.localStorage.getItem("command");
-
   if (event.data == "updateState") {
+
+    // Get state of extension from storage
+    state = (window.localStorage.getItem("state") == "true");
+    console.log(state)
+
+    // Get command icon type from storage
+    command = window.localStorage.getItem("command");
 
     // Toggle state
     state = !state;
@@ -142,7 +143,7 @@ function updateState(event) {
     }
 
     // Save state in storage
-    window.localStorage.setItem("state", JSON.stringify(true));
+    window.localStorage.setItem("state", JSON.stringify(state));
 
   }
 

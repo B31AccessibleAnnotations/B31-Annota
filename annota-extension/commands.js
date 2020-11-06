@@ -1,7 +1,7 @@
 // Extension command listener
 chrome.commands.onCommand.addListener(function(hotkey) {
 
-  state = (window.localStorage.getItem("state") == true);
+  state = (window.localStorage.getItem("state") == "true");
 
   switch(hotkey) {
 
