@@ -24,13 +24,13 @@ function initMenus() {
   // Extention Menu Options
   chrome.contextMenus.create({
     "id": "toggleState",
-    "title": "Doze                                   " + window.command + "+Shift+D",
+    "title": "Doze                                   " + window.command + "+D",
     "contexts": ["browser_action"]
   });
 
   chrome.contextMenus.create({
     "id": "help",
-    "title": "Help                                    " + window.command + "+Shift+H",
+    "title": "Help                                    " + window.command + "+H",
     "contexts": ["browser_action"]
   });
 
@@ -43,7 +43,7 @@ function initMenus() {
 
   chrome.contextMenus.create({
     "id": "addAnnota",
-    "title": "Annotate                             " + window.command + "+Shift+Q",
+    "title": "Annotate                             " + window.command + "+Q",
     "contexts": ["browser_action"]
   });
 
@@ -111,7 +111,7 @@ function updateState(event) {
       // Update item
       chrome.contextMenus.update("toggleState",
       {
-        "title": "Doze                                   " + command + "+Shift+D"
+        "title": "Doze                                   " + command + "+D"
       });
 
       // Enable extension items
@@ -129,7 +129,7 @@ function updateState(event) {
       // Update item
       chrome.contextMenus.update("toggleState",
       {
-        "title": "Awake                                  " + command + "+A"
+        "title": "Awake                                  Alt+A"
       });
 
       // Disable extension items

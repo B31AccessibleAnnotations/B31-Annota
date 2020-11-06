@@ -8,9 +8,9 @@ chrome.runtime.onInstalled.addListener(function() {
 
   // Command icon for Mac/Windows
   if (window.navigator.userAgent.indexOf("Mac") != -1) {
-    command = "⌘";
-  } else {
     command = "Alt";
+  } else {
+    command = "Alt+Shift";
   }
 
   window.localStorage.setItem("command", command);
