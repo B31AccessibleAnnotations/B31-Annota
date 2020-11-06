@@ -1,0 +1,46 @@
+.sidebar {
+  max-width: 14rem !important;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #010014;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sidebar .logo {
+  font-size: 1.6rem;
+}
+
+.bg-gradient-primary {
+  background-color: #010014;
+  background-image: linear-gradient(180deg,#004F62 10%,#010014);
+  background-size: cover;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#wrapper #content-wrapper #content {
+  flex: 1 0 auto;
+}
+
+#wrapper #content-wrapper {
+  background-color: #f8f9fc;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container-bg {
+  background: #01141C;
+}
+
+.navbar, .navbar .container, .navbar .container-fluid, .navbar .container-lg, .navbar .container-md, .navbar .container-sm, .navbar .container-xl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
