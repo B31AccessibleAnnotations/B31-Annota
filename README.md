@@ -17,6 +17,7 @@ A discourse analysis, the study of written or spoken language in relation to its
 ## Testing and running
 
 **Basic** start option: run the Flask app from a Python virtual environment
+
 ```{bash}
   cd gng2101-proj                   # Navigate to folder
   python3 -m venv env               # Make virtual environment
@@ -26,7 +27,16 @@ A discourse analysis, the study of written or spoken language in relation to its
 
 ```
 
+**If you have an env already** start option: run app
+
+```{bash}
+  source env/bin/activate
+  python app.py
+
+```
+
 **Big Hammer** start option: no virtual environment, just run the app and install all packages locally
+
 ```{bash}
   cd gng2101-proj                   # Navigate to folder
   cd app                            # Navigate to app folder
@@ -40,6 +50,13 @@ A discourse analysis, the study of written or spoken language in relation to its
   python -m pip freeze > requirements.txt
 
 ```
+
+To deactivate virtual environment after you are done:
+
+```{bash}
+  deactivate
+```
+
 
 With slight variations between different workspaces, ex. Windows/Linux command line script may differ slightly. After you see similar text to the below:
 

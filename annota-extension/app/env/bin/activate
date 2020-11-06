@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/diqiao/Documents/github/gng2101-proj/app/env"
+VIRTUAL_ENV="/Users/diqiao/Documents/github/B31-Annota/annota-extension/app/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

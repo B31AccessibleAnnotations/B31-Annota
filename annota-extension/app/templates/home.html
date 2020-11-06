@@ -7,34 +7,43 @@
     <title>Annota</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="static/css/home.css">
-    <link rel="stylesheet" href="static/css/sidebar.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/favicon_package/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon_package/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon_package/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon_package/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='img/favicon_package/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <!-- Theme-color can be adapted for changing based on chrome theme... for a later day-->
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body id="page-top">
     <div class="d-flex p-5" id="background">
         <div class="row home-content container-fluid">
             <div class="col">
-                <div id="functional">
+                <div id="functional" alt="Navigation and functionality sidebar">
                     <div class="row">
-                        <div class="col"><a href="#"><img class="icon" src="static/img/mapview.png"></a></div>
+                        <div class="col"><a accesskey="m" href="/index"><img alt="Clickable icon with connections and node for Mapview functionality" class="icon" src="static/img/mapview.png"></a></div>
                     </div>
                     <div class="row">
-                        <div class="col"><a href="#"><img class="icon" src="static/img/timeline.png"></a></div>
+                        <div class="col"><a accesskey="t" href="/index"><img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png"></a></div>
                     </div>
                 </div>
             </div>
             <div class="col col-5">
-                <div class="card annota-chat">
+                <div class="card annota-chat" alt="Communication text bubble from Annota">
                     <div class="card-img-overlay">
-                        <h4>Title</h4>
-                        <p>Paragraph</p>
+                        <p>Good morning!</p>
                     </div>
                 </div>
-                <div class="card last-saved">
+                <div class="card last-saved" alt="Quick access panel for last visited and/or saved items">
                     <div class="card-body m-4">
-                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title" alt="Quick access items">Quick Access Items</h4>
                         <ul class="list-group">
                             <li class="list-group-item"><span>List Group Item 1</span></li>
                             <li class="list-group-item"><span>List Group Item 2</span></li>
@@ -44,9 +53,9 @@
                 </div>
             </div>
             <div class="col col-4">
-                <div class="card favourites-panel">
+                <div class="card favourites-panel" alt="Quick access panel for favourite items">
                     <div class="card-body m-4">
-                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title" alt="Favourite items">Favourite Items</h4>
                         <ul class="list-group">
                             <li class="list-group-item"><span>List Group Item 1</span></li>
                             <li class="list-group-item"><span>List Group Item 2</span></li>
@@ -56,19 +65,20 @@
                 </div>
             </div>
             <div class="col">
-                <div id="settings-off">
+                <div id="settings-off" alt="Settings and doze toggle sidebar">
                     <div class="row">
-                        <div class="col"><a href="#" src="settings">Link<img class="icon" src="static/img/settings.png"></a></div>
+                        <div class="col"><a accesskey="s" href="#"><img alt="Clickable icon in the shape of a gear for application settings" class="icon" src="static/img/settings.png"></a></div>
                     </div>
                     <div class="row">
-                        <div class="col"><a href="#" src="assets/img/doze.png">Link<img class="icon" src="static/img/doze.png"></a></div>
+                        <div class="col"><a accesskey="d" href="#"><img alt="Clickable icon with moon and stars for dozing Annota" class="icon" src="static/img/doze.png"></a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div><img class="blobs" src="static/img/blobs.png"><img class="wave lighter-wave" src="static/img/wave1.png"><img class="wave darker-wave" src="static/img/wave2.png">
-    <script src="static/js/jquery-3.5.1.min.js"></script>
-    <script src="static/bootstrap-4.3.1-dist/bootstrap.bundle.min.js"></script>
+    </div><img class="graphics blobs" src="static/img/blobs.png"><img class="graphics wave lighter-wave" src="static/img/wave1.png"><img class="graphics wave darker-wave" src="static/img/wave2.png">
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js') }}"></script>
+
 </body>
 
 </html>

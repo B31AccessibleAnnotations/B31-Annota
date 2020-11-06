@@ -1,0 +1,25 @@
+
+h2 {
+    font-size: x-large;
+    margin: 2rem;
+}
+
+h3 {
+    font-size: large;
+    margin: 2rem;
+    color: #000;
+}
+
+p {
+    font-size: medium;
+    margin-left: 2rem;
+}
+
+.container-bg {
+    background: #fff!important;
+}
+
+#features-table {
+    width: 90%;
+    margin: 0 auto;
+}
