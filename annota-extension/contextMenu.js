@@ -74,7 +74,7 @@ function addContextListener() {
       window.postMessage("updateState", "*");
     }
 
-    if (info.menuItemId == "annotate" || info.menuItemId == "addToAnnota") {
+    if (info.menuItemId == "annotate" || info.menuItemId == "addAnnota") {
       chrome.tabs.executeScript({
         file: "overlay/overlay-creation.js"
       });
