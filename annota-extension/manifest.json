@@ -34,28 +34,28 @@
         "doze": {
           "suggested_key": {
             "default": "Alt+Shift+D",
-            "mac": "Command+Shift+D"
+            "mac": "Alt+D"
           },
           "description": "Turn off the app"
         },
         "awake": {
           "suggested_key": {
             "default": "Alt+A",
-            "mac": "Command+A"
+            "mac": "Alt+A"
           },
           "description": "Turn on the app"
         },
         "help": {
           "suggested_key": {
             "default": "Alt+Shift+H",
-            "mac": "Command+Shift+H"
+            "mac": "Alt+H"
           },
           "description": "Opens the help page"
         },
         "addToAnnota": {
           "suggested_key": {
             "default": "Alt+Shift+Q",
-            "mac": "Command+Shift+Q"
+            "mac": "Alt+Q"
           },
           "description": "Adds current file/page/selection to Annota"
         }
