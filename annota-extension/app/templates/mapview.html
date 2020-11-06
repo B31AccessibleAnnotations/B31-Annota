@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Annota</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/favicon_package/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon_package/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon_package/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon_package/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='img/favicon_package/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <!-- Theme-color can be adapted for changing based on chrome theme... for a later day-->
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a accesskey="m" class="nav-link active" href="#"><img alt="Clickable icon with connections and node for Mapview functionality" class="icon" src="static/img/mapview.png"></a></li>
+                    <li class="nav-item"><a accesskey="t" class="nav-link" href="/timeline"><img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png"></a></li>
+                    <li class="nav-item"><a accesskey="h" class="nav-link" href="/home"><img alt="Home button" class="icon" src="static/img/home.png"></a></li>
+                    <li class="nav-item"><a accesskey="s" class="nav-link" href="/settings"><img alt="Clickable icon in the shape of a gear for application settings" class="icon" src="static/img/settings.png"></a></li>
+                    <li class="nav-item"><a accesskey="d" class="nav-link" href="#"><img alt="Clickable icon with moon and stars for dozing Annota" class="icon" src="static/img/doze.png"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div id="select-source" class="dropdown m-1" alt="Select source document dropdown">
+                    <button accesskey="r" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select Source Document
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Alt 1</a>
+                      <a class="dropdown-item" href="#">Alt 2</a>
+                      <a class="dropdown-item" href="#">Alt 3</a>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                        <div class="container">
+                            <img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>

@@ -23,9 +23,17 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/index')
-def index():
-    return render_template('index.html')
+@app.route('/mapview')
+def mapview():
+    return render_template('mapview.html')
+
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html')
+
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
 
 # Debug when run
 if __name__ == '__main__':
