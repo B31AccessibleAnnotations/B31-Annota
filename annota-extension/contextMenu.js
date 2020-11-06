@@ -24,13 +24,13 @@ function initMenus() {
   // Extention Menu Options
   chrome.contextMenus.create({
     "id": "toggleState",
-    "title": "Doze                                   " + command + "+Shift+D",
+    "title": "Doze                                   " + window.command + "+Shift+D",
     "contexts": ["browser_action"]
   });
 
   chrome.contextMenus.create({
     "id": "help",
-    "title": "Help                                    " + command + "+Shift+H",
+    "title": "Help                                    " + window.command + "+Shift+H",
     "contexts": ["browser_action"]
   });
 
@@ -43,7 +43,7 @@ function initMenus() {
 
   chrome.contextMenus.create({
     "id": "addAnnota",
-    "title": "Annotate                             " + command + "+Shift+Q",
+    "title": "Annotate                             " + window.command + "+Shift+Q",
     "contexts": ["browser_action"]
   });
 
@@ -96,7 +96,6 @@ function updateState(event) {
 
     // Get state of extension from storage
     state = (window.localStorage.getItem("state") == "true");
-    console.log(state)
 
     // Get command icon type from storage
     command = window.localStorage.getItem("command");
