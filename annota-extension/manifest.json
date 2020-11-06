@@ -10,13 +10,13 @@
       }
     },
     "chrome_url_overrides": {
-      "newtab": "app/templates/index.html"
+      "newtab": "app/templates/home.html"
     },
     "icons": {
         "128": "annota-logo.png"
     },
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["background.js", "contextMenu.js", "commands.js"],
       "persistent": false
     },
     "content_scripts": [
@@ -24,5 +24,35 @@
     ],
     "web_accessible_resources": [
       "overlay/overlay.html"
-    ]
+    ],
+    "commands": {
+        "doze": {
+          "suggested_key": {
+            "default": "Alt+Shift+D",
+            "mac": "Command+Shift+D"
+          },
+          "description": "Turn off the app"
+        },
+        "awake": {
+          "suggested_key": {
+            "default": "Alt+A",
+            "mac": "Command+A"
+          },
+          "description": "Turn on the app"
+        },
+        "help": {
+          "suggested_key": {
+            "default": "Alt+Shift+H",
+            "mac": "Command+Shift+H"
+          },
+          "description": "Opens the help page"
+        },
+        "addToAnnota": {
+          "suggested_key": {
+            "default": "Alt+Shift+Q",
+            "mac": "Command+Shift+Q"
+          },
+          "description": "Adds current file/page/selection to Annota"
+        }
+    }
 }
