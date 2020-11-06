@@ -1,7 +1,9 @@
 // Extension command listener
-chrome.commands.onCommand.addListener(function(command) {
+chrome.commands.onCommand.addListener(function(hotkey) {
 
-  switch(command) {
+  state = (window.localStorage.getItem("state") == true);
+
+  switch(hotkey) {
 
     case "doze":
       if (state) window.postMessage("updateState", "*");

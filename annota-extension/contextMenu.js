@@ -18,6 +18,9 @@ function contextMenuListener(event) {
 
 function initMenus() {
 
+  // Grab command from storage
+  command = window.localStorage.getItem("command");
+
   // Extention Menu Options
   chrome.contextMenus.create({
     "id": "toggleState",
@@ -89,9 +92,15 @@ function addContextListener() {
 
 function updateState(event) {
 
+  // Get state of extension from storage
+  state = (window.localStorage.getItem("state") == true);
+
+  // Get command icon type from storage
+  command = window.localStorage.getItem("command");
+
   if (event.data == "updateState") {
 
-    // Get state of extension from storage
+    // Toggle state
     state = !state;
 
     if (state) {
@@ -131,6 +140,9 @@ function updateState(event) {
       chrome.contextMenus.update("annotate", {"visible": false});
 
     }
+
+    // Save state in storage
+    window.localStorage.setItem("state", JSON.stringify(true));
 
   }
 
