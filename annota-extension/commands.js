@@ -1,13 +1,13 @@
 // Extension command listener
-chrome.commands.onCommand.addListener(function(command) {
+chrome.commands.onCommand.addListener(function(hotkey) {
 
-  switch(command) {
+  switch(hotkey) {
 
     case "doze":
-      if (state) window.postMessage("updateState", "*");
+      if (window.state) window.postMessage("updateState", "*");
       break;
     case "awake":
-      if (!state) window.postMessage("updateState", "*");
+      if (!window.state) window.postMessage("updateState", "*");
       break;
     case "help":
       chrome.tabs.create({
