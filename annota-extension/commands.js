@@ -1,13 +1,15 @@
 // Extension command listener
 chrome.commands.onCommand.addListener(function(hotkey) {
 
+  state = (window.localStorage.getItem("state") == "true");
+
   switch(hotkey) {
 
     case "doze":
-      if (window.state) window.postMessage("updateState", "*");
+      if (state) window.postMessage("updateState", "*");
       break;
     case "awake":
-      if (!window.state) window.postMessage("updateState", "*");
+      if (!state) window.postMessage("updateState", "*");
       break;
     case "help":
       chrome.tabs.create({

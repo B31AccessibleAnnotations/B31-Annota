@@ -18,6 +18,9 @@ function contextMenuListener(event) {
 
 function initMenus() {
 
+  // Grab command from storage
+  command = window.localStorage.getItem("command");
+
   // Extention Menu Options
   chrome.contextMenus.create({
     "id": "toggleState",
@@ -71,7 +74,7 @@ function addContextListener() {
       window.postMessage("updateState", "*");
     }
 
-    if (info.menuItemId == "annotate") {
+    if (info.menuItemId == "annotate" || info.menuItemId == "addToAnnota") {
       chrome.tabs.executeScript({
         file: "overlay/overlay-creation.js"
       });
@@ -92,9 +95,15 @@ function updateState(event) {
   if (event.data == "updateState") {
 
     // Get state of extension from storage
-    window.state = !window.state;
+    state = (window.localStorage.getItem("state") == "true");
 
-    if (window.state) {
+    // Get command icon type from storage
+    command = window.localStorage.getItem("command");
+
+    // Toggle state
+    state = !state;
+
+    if (state) {
 
       // Enable extension
       chrome.browserAction.enable();
@@ -102,7 +111,7 @@ function updateState(event) {
       // Update item
       chrome.contextMenus.update("toggleState",
       {
-        "title": "Doze                                   " + window.command + "+Shift+D"
+        "title": "Doze                                   " + command + "+Shift+D"
       });
 
       // Enable extension items
@@ -120,7 +129,7 @@ function updateState(event) {
       // Update item
       chrome.contextMenus.update("toggleState",
       {
-        "title": "Awake                                  " + window.command + "+A"
+        "title": "Awake                                  " + command + "+A"
       });
 
       // Disable extension items
@@ -131,6 +140,9 @@ function updateState(event) {
       chrome.contextMenus.update("annotate", {"visible": false});
 
     }
+
+    // Save state in storage
+    window.localStorage.setItem("state", JSON.stringify(state));
 
   }
 
