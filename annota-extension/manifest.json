@@ -16,7 +16,7 @@
         "128": "annota-logo.png"
     },
     "background": {
-      "scripts": ["background.js", "contextMenu.js"],
+      "scripts": ["background.js", "contextMenu.js", "commands.js"],
       "persistent": false
     },
     "content_scripts": [
@@ -28,27 +28,29 @@
     "commands": {
         "doze": {
           "suggested_key": {
-            "default": "Alt+Shift+D"
+            "default": "Alt+Shift+D",
+            "mac": "Command+Shift+D"
           },
-          "description": "Dozes the app"
+          "description": "Turn off the app"
         },
         "awake": {
           "suggested_key": {
-            "default": "Alt+Shift+A"
+            "default": "Alt+A",
+            "mac": "Command+A"
           },
-          "description": "Awakens the app"
+          "description": "Turn on the app"
         },
         "help": {
           "suggested_key": {
-            "default": "Ctrl+Shift+H",
+            "default": "Alt+Shift+H",
             "mac": "Command+Shift+H"
           },
           "description": "Opens the help page"
         },
         "addToAnnota": {
           "suggested_key": {
-            "default": "Ctrl+Q",
-            "mac": "Command+Q"
+            "default": "Alt+Shift+Q",
+            "mac": "Command+Shift+Q"
           },
           "description": "Adds current file/page/selection to Annota"
         }
