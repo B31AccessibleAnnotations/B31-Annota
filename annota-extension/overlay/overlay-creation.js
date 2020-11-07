@@ -20,6 +20,9 @@ function receiveMessage(event){
 
       // Enable scrolling
       document.getElementsByTagName('body')[0].style.overflow = "visible";
+
+      // Remove listener
+      window.removeEventListener("message", receiveMessage);
    }
 
 }
