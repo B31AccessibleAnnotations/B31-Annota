@@ -49,7 +49,14 @@
                 </div>
                 <div class="container-fluid">
                         <div class="container">
-                            <img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">
+                            <!--<img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">-->
+                            {% for file in files %}
+                                <a href="#">
+                                    <h2>{{ file['title'] }}</h2>
+                                </a>
+                                <span class="badge badge-primary">{{ file['created'] }}</span>
+                                <hr>
+                            {% endfor %}
                         </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 import os
 import datetime
+import sqlite3
 
 from flask import (
   Flask,
@@ -11,11 +12,18 @@ from flask import (
   url_for,
   redirect,
   session,
-  send_from_directory
+  send_from_directory,
+  g
 )
 
 
 app = Flask(__name__)
+
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row # gives name-based access to columns
+    return conn
+
 
 
 @app.route('/')
@@ -25,7 +33,10 @@ def home():
 
 @app.route('/mapview')
 def mapview():
-    return render_template('mapview.html')
+    conn = get_db_connection()
+    files = conn.execute('SELECT * FROM files').fetchall()
+    conn.close()
+    return render_template('mapview.html', files=files)
 
 @app.route('/timeline')
 def timeline():
