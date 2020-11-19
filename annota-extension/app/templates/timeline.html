@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/favicon_package/apple-touch-icon.png') }}">
@@ -48,9 +49,58 @@
                     </div>
                 </div>
                 <div class="container-fluid">
-                    <div class="container">
-                        <img alt="Substitute image for timeline functionality" style="width: 75vw; margin-top:5rem;" src="static/img/timeline-area.png">
-                    </div>
+                    <div class="timeline-container">
+                        <!--<img alt="Substitute image for timeline functionality" style="width: 75vw; margin-top:5rem;" src="static/img/timeline-area.png">-->
+                        <!--{% for file in files %}
+                            <a href="#">
+                                <h2>{{ file['title'] }}</h2>
+                            </a>
+                            <span class="badge badge-primary">{{ file['created'] }}</span>
+                            <hr>
+                        {% endfor %}-->
+                        <h1 id="timeline">Timeline</h1>
+                            <ul class="timeline">
+                                {% for file in files%}
+                              <li>
+                                <div class="timeline-badge"></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">{{ file['title'] }}</h4>
+                                    <p><small class="text-muted">{{ file['created'] }}</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>{{ file['content'] }}</p>
+                                        <hr>
+                                        <div class="btn-group">
+                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                        </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="timeline-inverted">
+                                <div class="timeline-badge warning"></div>
+                                <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4 class="timeline-title">{{ file['title'] }}</h4>
+                                    <p><small class="text-muted">{{ file['created'] }}</small></p>
+                                  </div>
+                                  <div class="timeline-body">
+                                    <p>{{ file['content'] }}</p>
+                                  </div>
+                                </div>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                    </div> <!--timeline container div-->
                 </div>
             </div>
         </div>

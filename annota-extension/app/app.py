@@ -33,14 +33,14 @@ def home():
 
 @app.route('/mapview')
 def mapview():
-    conn = get_db_connection()
-    files = conn.execute('SELECT * FROM files').fetchall()
-    conn.close()
-    return render_template('mapview.html', files=files)
+    return render_template('mapview.html')
 
 @app.route('/timeline')
 def timeline():
-    return render_template('timeline.html')
+    conn = get_db_connection()
+    files = conn.execute('SELECT * FROM files').fetchall()
+    conn.close()
+    return render_template('timeline.html', files=files)
 
 @app.route('/settings')
 def settings():
