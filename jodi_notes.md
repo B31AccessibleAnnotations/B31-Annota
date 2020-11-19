@@ -9,3 +9,5 @@ Goals before Nov 20:
 
 [tutorial](https://morioh.com/p/20750b8a8580)
 
+might use cytoscape for mapview lol
+
