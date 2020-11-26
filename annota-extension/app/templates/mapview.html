@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
 
+    <!-- css for cytoscape -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-sans.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cyto-index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tooltipster.bundle.min.css') }}" />
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/favicon_package/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon_package/favicon-32x32.png') }}">
@@ -46,10 +54,51 @@
                       <a class="dropdown-item" href="#">Alt 2</a>
                       <a class="dropdown-item" href="#">Alt 3</a>
                     </div>
+
+                    <label for="data" class="tooltip u-pull-left" title="Switch to a new dataset">Active dataset</label>
+                    <div class="u-cf"></div>
+                    <select class id="data">
+                        <option value="social.json" selected>Social</option>
+                        <option value="genes.json">Genes</option>
+                        <option value="custom.json">Custom</option>
+                    </select>
+
+                    <label for="style" class="tooltip u-pull-left" title="Switch to a new graph stylesheet">Active stylesheet</label>
+                    <div class="u-cf"></div>
+                    <select id="style">
+                        <option value="plain.cycss" selected>Plain</option>
+                        <option value="fancy.json">Fancy</option>
+                        <option value="custom.cycss">Custom</option>
+                    </select>
+
+                    <label for="layout" class="tooltip u-pull-left" title="Change layout">Active layout</label>
+                    <div class="u-cf"></div>
+                    <select id="layout">
+                        <option value="cola" selected>Force-directed</option>
+                        <option value="concentricCentrality">Concentric by centrality</option>
+                        <option value="concentricHierarchyCentrality">Hierarchy by centrality</option>
+                        <option value="custom">Custom</option>
+                    </select>
+
+                    <label for="algorithm" class="tooltip u-pull-left" title="Run algorithm. Try running A* a few times to see distances to different nodes">
+                        Run algorithm
+                      </label>
+                    <div class="u-cf"></div>
+                    <select id="algorithm">
+                        <option value="none" selected>None</option>
+                        <option value="bfs">BFS</option>
+                        <option value="dfs">DFS</option>
+                        <option value="astar">A*</option>
+                        <option value="custom">Custom</option>
+                    </select>
+
                 </div>
                 <div class="container-fluid">
                         <div class="container">
-                            <img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">
+                            <!--<img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">-->
+                            <div id="cy" class="cytoscape-main">
+                                <!-- cytoscape visualization -->
+                            </div>
                         </div>
                 </div>
             </div>
@@ -58,6 +107,14 @@
     <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <!-- script for cytoscape -->
+    <script src="{{ url_for('static', filename='js/cytoscape.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cola.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cytoscape-cola.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tooltipster.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cyto-index.js') }}"></script>
 </body>
 
 </html>
