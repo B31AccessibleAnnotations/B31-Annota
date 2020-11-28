@@ -125,11 +125,12 @@
             style: {
                 shape: 'circle',
                 'background-color': 'white',
+                'background-image': 'url(../static/img/cat.jpg)',
                 label: 'data(id)'
             }
         }],
         // interaction options:
-        minZoom: 1e-3,
+        minZoom: 1e-2,
         maxZoom: 1e3,
         zoomingEnabled: true,
         userZoomingEnabled: true,
@@ -142,6 +143,16 @@
         autolock: false,
         autoungrabify: false,
         autounselectify: false,
+
+        // rendering options:
+        headless: false,
+        styleEnabled: true,
+        hideEdgesOnViewport: false,
+        textureOnViewport: false,
+        motionBlur: false,
+        motionBlurOpacity: 0.2,
+        wheelSensitivity: 0.2,
+        pixelRatio: 'auto'
       });
     </script>
 </body>
