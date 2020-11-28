@@ -4,17 +4,33 @@
   <head>
     <meta charset="utf-8">
     <title>Annota Annotate Overlay</title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
     <link rel="stylesheet" href="overlay-stylesheet.css">
     <script src="overlay-script.js"></script>
+
   </head>
   <body>
-        <!-- The Modal -->
+    <!-- The Modal -->
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <div id="editor">
+          <p id="initial-text">Add your annotations here...</p>
+          <p><br></p>
+        </div>
+
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+        <script>
+          var quill = new Quill('#editor', {
+            theme: 'snow'
+          });
+        </script>
+
+
       </div>
 
     </div>

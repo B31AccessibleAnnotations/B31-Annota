@@ -1,10 +1,17 @@
 var modal;
 var span;
+var initialText;
+var selectionText;
 
 // Wait for page to load
 window.onload = function() {
+
   // Get the modal
   modal = document.getElementById("myModal");
+
+  // Modify editor with the selected text
+  initialText = document.getElementsByClassName("ql-editor")[0];
+  initialText.innerHTML = "<p>" + window.name + "</p>";
 
   // Get the <span> element that closes the modal
   span = document.getElementsByClassName("close")[0];
