@@ -5,32 +5,54 @@
     <meta charset="utf-8">
     <title>Annota Annotate Overlay</title>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <link rel="stylesheet" href="overlay-stylesheet.css">
     <script src="overlay-script.js"></script>
 
+    <link rel="stylesheet" href="tags/style.css">
+
+
   </head>
   <body>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="editor">
-          <p id="initial-text">Add your annotations here...</p>
-          <p><br></p>
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
         </div>
+        <div class="modal-body">
+          <div id="row">
+            <div id="editor-container">
+              <div id="editor">
+                <p id="initial-text">Add your annotations here...</p>
+                <p><br></p>
+              </div>
+            </div>
+            <div id="column">
+              <div id="tags" class="simple-tags" data-simple-tags="add tags here"></div>
+              <div id="alert"></div>
+              <script src="tags/script.js"></script>
+              <script>
+                const tags = new Tags('#tags');
+              </script>
+            </div>
+          </div>
 
-        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-        <script>
-          var quill = new Quill('#editor', {
-            theme: 'snow'
-          });
-        </script>
-
-
+          <script>
+            var quill = new Quill('#editor', {
+              theme: 'snow',
+              bounds: "editor-container"
+            });
+          </script>
+        </div>
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
       </div>
 
     </div>

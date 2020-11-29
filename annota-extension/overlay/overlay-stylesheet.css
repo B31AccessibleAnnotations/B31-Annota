@@ -1,7 +1,11 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
 .modal {
-  display: block; 
+  display: block;
   position: fixed; /* Stay in place */
   z-index: 9999; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -11,18 +15,35 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content */
 .modal-content {
+  position: relative;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  margin: auto;
+  padding: 0;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -33,4 +54,47 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+#row {
+  padding: 16px;
+}
+
+#row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#editor-container {
+  float: left;
+  width: 60%;
+}
+
+#column {
+  float:left;
+  width:40%;
+}
+
+@media screen and (max-width: 1000px) {
+  #column {
+    width: 100%;
+  }
+  #editor-container{
+    width:100%;
+  }
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
 }
