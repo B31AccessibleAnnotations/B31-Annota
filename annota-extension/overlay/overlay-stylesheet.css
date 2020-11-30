@@ -64,8 +64,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .modal-body {padding: 2px 16px;}
 
+.ql-container {
+  min-height: 145px;
+}
+
+#alert {margin:14px;}
+
 #row {
-  padding: 16px;
+  margin: 18px;
 }
 
 #row:after {
@@ -97,4 +103,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white;
+}
+
+#references {
+  resize: none;
+  margin: 14px;
+  border: 1px solid #1e87f0;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
