@@ -4,13 +4,17 @@
   <head>
     <meta charset="utf-8">
     <title>Annota Annotate Overlay</title>
+    <link rel="stylesheet" href="select.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <link rel="stylesheet" href="overlay-stylesheet.css">
     <script src="overlay-script.js"></script>
 
     <link rel="stylesheet" href="tags/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
 
 
   </head>
@@ -23,7 +27,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <span class="close">&times;</span>
-          <h2>Modal Header</h2>
+          <h2>Annotate</h2>
         </div>
         <div class="modal-body">
           <div id="row">
@@ -41,11 +45,33 @@
               <script>
                 const tags = new Tags('#tags');
               </script>
+              <select class="choices"></select>
             </div>
           </div>
 
           <script>
+
+            var toolbarOptions = [
+              ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+              ['blockquote', 'code-block'],
+
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+              [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+              [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+
+              [{ 'size': ['small', false, 'large', 'huge'] }, { 'header': [1, 2, 3, 4, 5, 6, false] }],  // custom dropdown
+
+              [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+              [{ 'font': [] }],
+              [{ 'align': [] }],
+
+              ['clean']                                         // remove formatting button
+            ];
+
             var quill = new Quill('#editor', {
+              modules: {
+                toolbar: toolbarOptions
+              },
               theme: 'snow',
               bounds: "editor-container",
               placeholder: "Add your annotation here..."
@@ -53,7 +79,11 @@
           </script>
         </div>
         <div class="modal-footer">
-          <h3>Modal Footer</h3>
+          <div id="wrapper">
+            <a class="horizontal">
+              <span class="text">Export</span>
+            </a>
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,140 @@
+.choices * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.choices *,
+.choices:after,
+.choices:before {
+    box-sizing: border-box;
+}
+
+.choices hr,
+.choices label {
+    display: block;
+}
+.choices label,
+.choices p {
+    margin-bottom: 8px;
+}
+.choices label {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.choices p {
+    margin-top: 0;
+}
+.choices hr {
+    margin: 30px 0;
+    border: 0;
+    border-bottom: 1px solid #eaeaea;
+    height: 1px;
+}
+.choices h1,
+.choices h2,
+.choices h3,
+.choices h5,
+.choices h6 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.choices a,
+.choices a:focus,
+.choices a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.choices .form-control {
+    display: block;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 2.5px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-bottom: 24px;
+}
+.choices .h1,
+.choices h1 {
+    font-size: 32px;
+}
+.choices .h2,
+.choices h2 {
+    font-size: 24px;
+}
+.choices .h3,
+.choices h3 {
+    font-size: 20px;
+}
+.choices .h4,
+.choices h4 {
+    font-size: 18px;
+}
+.choices .h5,
+.choices h5 {
+    font-size: 16px;
+}
+.choices .h6,
+.choices h6 {
+    font-size: 14px;
+}
+.choices label + .choices p {
+    margin-top: -4px;
+}
+.choices .container {
+    display: block;
+    margin: auto;
+    max-width: 40em;
+    padding: 48px;
+}
+@media (max-width: 620px) {
+    .choices .container {
+        padding: 0;
+    }
+}
+.choices .section {
+    background-color: #fff;
+    padding: 24px;
+    color: #333;
+}
+.choices .section a,
+.choices .section a:focus,
+.choices .section a:visited {
+    color: #00bcd4;
+}
+.choices .logo {
+    display: block;
+    margin-bottom: 12px;
+}
+.choices .logo__img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+    padding: 6px 0;
+}
+.choices .visible-ie {
+    display: none;
+}
+.choices .push-bottom {
+    margin-bottom: 24px;
+}
+.choices .zero-bottom {
+    margin-bottom: 0;
+}
+.choices .zero-top {
+    margin-top: 0;
+}
+.choices .text-center {
+    text-align: center;
+}
+.choices [data-test-hook] {
+    margin-bottom: 24px;
+}

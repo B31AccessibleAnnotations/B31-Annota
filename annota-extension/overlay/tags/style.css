@@ -1,5 +1,5 @@
 .simple-tags {
-  border: 1px solid #1e87f0;
+  background-color: white;
   box-sizing: border-box;
   margin: 1em;
   padding: 0em 0.5em;
@@ -22,7 +22,7 @@
     margin: 0.5em 0.2em;
     padding: 0.5em;
     color: #fff;
-    background-color: #1e87f0;
+    background-color: #4D648A;
     border-radius: 5px; }
   .simple-tags ul li a {
     margin: 0.5em 0.2em;
