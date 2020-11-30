@@ -5,7 +5,7 @@ var selectionText;
 if (!location.ancestorOrigins.contains(extensionOrigin)) {
 
     // Grab text if any was selected
-    selectionText = ((getSelectionText() == "") ? "Add your annotation here..." : getSelectionText());
+    selectionText = getSelectionText();
 
     // Insert iFrame
     document.body.insertAdjacentHTML("afterend", "<iframe id='overlay'  name='" + selectionText + "' src=" + chrome.runtime.getURL("overlay/overlay.html") + " style='position:absolute;top:" + document.documentElement.scrollTop + "px;left:0px;width:100%;height:100%;z-index:9999' frameborder='no'><iframe>");

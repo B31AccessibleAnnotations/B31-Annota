@@ -29,7 +29,7 @@
           <div id="row">
             <div id="editor-container">
               <div id="editor">
-                <p id="initial-text">Add your annotations here...</p>
+                <p id="initial-text"></p>
                 <p><br></p>
               </div>
             </div>
@@ -47,7 +47,8 @@
           <script>
             var quill = new Quill('#editor', {
               theme: 'snow',
-              bounds: "editor-container"
+              bounds: "editor-container",
+              placeholder: "Add your annotation here..."
             });
           </script>
         </div>
