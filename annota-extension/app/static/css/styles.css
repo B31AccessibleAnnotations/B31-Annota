@@ -28,3 +28,18 @@ html {
 .icon {
   width: 50px;
 }
+
+hr {
+  border: 1px dashed white;
+  opacity: 70%;
+}
+
+.form-check {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.settings-gutter {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
