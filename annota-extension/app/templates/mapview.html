@@ -10,14 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
-
-    <!-- css for cytoscape -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-sans.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/cyto-index.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tooltipster.bundle.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/favicon_package/apple-touch-icon.png') }}">
@@ -54,52 +47,12 @@
                       <a class="dropdown-item" href="#">Alt 2</a>
                       <a class="dropdown-item" href="#">Alt 3</a>
                     </div>
-
-                    <label for="data" class="tooltip u-pull-left" title="Switch to a new dataset">Active dataset</label>
-                    <div class="u-cf"></div>
-                    <select class id="data">
-                        <option value="social.json" selected>Social</option>
-                        <option value="genes.json">Genes</option>
-                        <option value="custom.json">Custom</option>
-                    </select>
-
-                    <label for="style" class="tooltip u-pull-left" title="Switch to a new graph stylesheet">Active stylesheet</label>
-                    <div class="u-cf"></div>
-                    <select id="style">
-                        <option value="plain.cycss" selected>Plain</option>
-                        <option value="fancy.json">Fancy</option>
-                        <option value="custom.cycss">Custom</option>
-                    </select>
-
-                    <label for="layout" class="tooltip u-pull-left" title="Change layout">Active layout</label>
-                    <div class="u-cf"></div>
-                    <select id="layout">
-                        <option value="cola" selected>Force-directed</option>
-                        <option value="concentricCentrality">Concentric by centrality</option>
-                        <option value="concentricHierarchyCentrality">Hierarchy by centrality</option>
-                        <option value="custom">Custom</option>
-                    </select>
-
-                    <label for="algorithm" class="tooltip u-pull-left" title="Run algorithm. Try running A* a few times to see distances to different nodes">
-                        Run algorithm
-                      </label>
-                    <div class="u-cf"></div>
-                    <select id="algorithm">
-                        <option value="none" selected>None</option>
-                        <option value="bfs">BFS</option>
-                        <option value="dfs">DFS</option>
-                        <option value="astar">A*</option>
-                        <option value="custom">Custom</option>
-                    </select>
-
                 </div>
                 <div class="container-fluid">
-                        <div class="container">
-                            <!--<img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">-->
-                            <div id="cy" class="cytoscape-main">
-                                <!-- cytoscape visualization -->
-                            </div>
-                        </div>
+                    <!--<img alt="Substitute image for mapview functionality" style="width: 75vw; margin-top:5rem;" src="static/img/mapview-area.png">-->
+                    <div id="cy" style="width:100%; height:90vh; background-color: #010014;">
+                        <!-- cytoscape visualization -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,9 +65,95 @@
     <script src="{{ url_for('static', filename='js/cytoscape.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cola.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cytoscape-cola.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/tooltipster.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/cyto-index.js') }}"></script>
+    <script>
+        var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+            // nodes
+            { data: { id: 'a' } },
+            { data: { id: 'b' } },
+            { data: { id: 'c' } },
+            { data: { id: 'd' } },
+            { data: { id: 'e' } },
+            { data: { id: 'f' } },
+            { data: { id: 'g' } },
+            { data: { id: 'h' } },
+            { data: { id: 'i' } },
+            { data: { id: 'j' } },
+            { data: { id: 'k' } },
+            { data: { id: 'l' } },
+            // edges
+            {
+                data: {
+                id: 'ab',
+                source: 'a',
+                target: 'b'
+                }
+            },
+            {
+                data: {
+                id: 'cb',
+                source: 'c',
+                target: 'b'
+                }
+            },
+            {
+                data: {
+                id: 'ac',
+                source: 'a',
+                target: 'c'
+                }
+            },
+            {
+                data: {
+                id: 'ce',
+                source: 'c',
+                target: 'e'
+                }
+            },
+            {
+                data: {
+                id: 'be',
+                source: 'b',
+                target: 'e'
+                }
+            }
+        ],
+        style: [
+        {
+            selector: 'node',
+            style: {
+                shape: 'circle',
+                'background-color': 'white',
+                label: 'data(id)'
+            }
+        }],
+        // interaction options:
+        minZoom: 1e-2,
+        maxZoom: 1e3,
+        zoomingEnabled: true,
+        userZoomingEnabled: true,
+        panningEnabled: true,
+        userPanningEnabled: true,
+        boxSelectionEnabled: true,
+        selectionType: 'single',
+        touchTapThreshold: 8,
+        desktopTapThreshold: 4,
+        autolock: false,
+        autoungrabify: false,
+        autounselectify: false,
+
+        // rendering options:
+        headless: false,
+        styleEnabled: true,
+        hideEdgesOnViewport: false,
+        textureOnViewport: false,
+        motionBlur: false,
+        motionBlurOpacity: 0.2,
+        wheelSensitivity: 0.2,
+        pixelRatio: 'auto'
+      });
+    </script>
 </body>
 
 </html>
