@@ -65,23 +65,24 @@
     <script src="{{ url_for('static', filename='js/cytoscape.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cola.js') }}"></script>
     <script src="{{ url_for('static', filename='js/cytoscape-cola.js') }}"></script>
+    
     <script>
         var cy = cytoscape({
         container: document.getElementById('cy'),
         elements: [
             // nodes
-            { data: { id: 'a' } },
+            { data: { id: 'a', classes:"test" },
+                position:
+                {  
+                    x: 100,
+                    y: 500
+                }
+            },
             { data: { id: 'b' } },
             { data: { id: 'c' } },
             { data: { id: 'd' } },
             { data: { id: 'e' } },
             { data: { id: 'f' } },
-            { data: { id: 'g' } },
-            { data: { id: 'h' } },
-            { data: { id: 'i' } },
-            { data: { id: 'j' } },
-            { data: { id: 'k' } },
-            { data: { id: 'l' } },
             // edges
             {
                 data: {
@@ -117,17 +118,37 @@
                 source: 'b',
                 target: 'e'
                 }
+            },
+            {
+                data: {
+                    id: 'de',
+                    source: 'd',
+                    target: 'f'
+                }
             }
         ],
+
+        layout: [
+        {
+            name: 'circle',
+        }],
+
         style: [
         {
             selector: 'node',
             style: {
                 shape: 'circle',
                 'background-color': 'white',
-                label: 'data(id)'
             }
-        }],
+        },
+        {
+            selector: '.test',
+            style: {
+                'background-color': 'black',
+            }
+        }
+        ],
+
         // interaction options:
         minZoom: 1e-2,
         maxZoom: 1e3,
@@ -151,7 +172,7 @@
         motionBlur: false,
         motionBlurOpacity: 0.2,
         wheelSensitivity: 0.2,
-        pixelRatio: 'auto'
+        pixelRatio: 'auto',
       });
     </script>
 </body>
