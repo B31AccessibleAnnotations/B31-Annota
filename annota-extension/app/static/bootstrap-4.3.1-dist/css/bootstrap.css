@@ -364,6 +364,8 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  color: floralwhite;
+  opacity: 100% !important;
 }
 
 h1, .h1 {
@@ -4571,11 +4573,13 @@ input[type="button"].btn-block {
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+
 }
 
 .card > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
+
 }
 
 .card-body {
@@ -5326,6 +5330,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
+  opacity: 100% !important;
 }
 
 .list-group-item-action {
@@ -5351,7 +5356,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
+  background-color: #eb0510;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 

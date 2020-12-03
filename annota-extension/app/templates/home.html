@@ -23,58 +23,126 @@
 </head>
 
 <body id="page-top">
-    <div class="d-flex p-5" id="background">
+    <div class="d-flex py-5 pl-5" id="background">
         <div class="row home-content container-fluid">
-            <div class="col">
+            <div class="col" style="z-index:3;">
                 <div id="functional" alt="Navigation and functionality sidebar">
                     <div class="row">
-                        <div class="col">
+                        <div class="col" >
                             <a accesskey="m" href="/mapview" data-toggle="tooltip" data-placement="top" title="Mapview">
-                                <img alt="Clickable icon with connections and node for Mapview functionality" class="icon" src="static/img/mapview.png">
+                                <img alt="Clickable icon with connections and node for Mapview functionality" class="icon ml-4" src="static/img/mapview.png" >
+                            </a>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a accesskey="t" href="/timeline" data-toggle="tooltip" data-placement="top" title="Timeline">
+                                <img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon ml-4" src="static/img/timeline.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" height="400">
+                        <div class="col" height="400">
+                            <!-- <a accesskey="t" href="/timeline" data-toggle="tooltip" data-placement="top" title="Timeline">
+                                <img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png">
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a accesskey="s" href="/settings" data-toggle="tooltip" data-placement="top" title="Settings">
+                                <img alt="Clickable icon in the shape of a gear for application settings" class="icon ml-4" src="static/img/settings.png">
                             </a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a accesskey="t" href="/timeline" data-toggle="tooltip" data-placement="top" title="Timeline">
-                                <img alt="Clickable icon with a vertical line and information boxes for Timeline functionality" class="icon" src="static/img/timeline.png">
+                            <a accesskey="d" href="#" data-toggle="tooltip" data-placement="top" title="Doze">
+                                <img alt="Clickable icon with moon and stars for dozing Annota" class="icon ml-4" src="static/img/doze.png">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col col-5">
-                <div class="card annota-chat" alt="Communication text bubble from Annota">
+                <div class="card annota-chat" style="z-index:2;" alt="Communication text bubble from Annota">
                     <div class="card-img-overlay">
-                        <p>Good morning!</p>
+                        <h5 style="color: azure;">Good afternoon, Jodi!</h5>
+                        <p> </p>
+                        <h3 style="color: azure;">Here's where you left off last night.</h3>
                     </div>
                 </div>
-                <div class="card last-saved" alt="Quick access panel for last visited and/or saved items">
-                    <div class="card-body m-4">
-                        <h4 class="card-title" alt="Quick access items">Quick Access Items</h4>
+                <div class="card last-saved" style="z-index:2;" alt="Quick access panel for last visited and/or saved items">
+                    <div class="card-body m-1">
+                        <h4 class="card-title" style="color: azure;" alt="Quick access items">Quick Access Items</h4>
                         <ul class="list-group">
-                            <li class="list-group-item"><span>List Group Item 1</span></li>
-                            <li class="list-group-item"><span>List Group Item 2</span></li>
-                            <li class="list-group-item"><span>List Group Item 3</span></li>
+                            <a href="/mapview" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/mapview.png" class="img-fluid pr-2" width = "50" alt="thesis link">
+                                    Thesis
+                                </div>
+                            </a>
+                            <a href="/timeline" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/timeline.png" class="img-fluid pr-2" width = "50" alt="timeline link">
+                                    Bill C-81
+                                </div>
+                            </a>
+                            <a href="/mapview" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/mapview.png" class="img-fluid pr-2" width = "50" alt="vacation link">
+                                    Summer 2022 Europe Trip
+                                </div>
+                            </a>
+                            <a href="/mapview" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/mapview.png" class="img-fluid pr-2" width = "50" alt="case study link">
+                                    Spotify Redesign Case Study
+                                </div>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col col-4">
-                <div class="card favourites-panel" alt="Quick access panel for favourite items">
-                    <div class="card-body m-4">
-                        <h4 class="card-title" alt="Favourite items">Favourite Items</h4>
+                <div class="card favourites-panel" style="z-index:2;" alt="Quick access panel for favourite items">
+                    <div class="card-body m-1">
+                        <h4 class="card-title" style="color: azure;" alt="Favourite items">Favourites</h4>
                         <ul class="list-group">
-                            <li class="list-group-item"><span>List Group Item 1</span></li>
-                            <li class="list-group-item"><span>List Group Item 2</span></li>
-                            <li class="list-group-item"><span>List Group Item 3</span></li>
+                            <a href="https://uottawa.brightspace.com/d2l/home" target="_blank" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/favicon_package/brightspace_favicon.ico" class="img-fluid pr-2" width = "40" alt="brightspace">
+                                    Brightspace
+                                </div>
+                            </a>
+                            <a href="https://outlook.live.com/" target="_blank" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/favicon_package/outlook_favicon.ico" class="img-fluid pr-2" width = "40" alt="brightspace">
+                                    Outlook
+                                </div>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/favicon_package/twitter_favicon.ico" class="img-fluid pr-2" width = "40" alt="brightspace">
+                                    Twitter
+                                </div>
+                            </a>
+                            <a href="https://calendar.google.com/" target="_blank" class="list-group-item list-group-item-action">
+                                <div class="image-parent">
+                                    <img src="static/img/favicon_package/googlecalendar_favicon.ico" class="img-fluid pr-2" width = "40" alt="brightspace">
+                                    Google Calendar
+                                </div>
+                            </a>
                         </ul>
                     </div>
+                </div>
+                <div class="card annota-logo" style="z-index:3;" alt="Annota logo">
+                    <img src="static/img/annota-tag-white-logo.png" class="img-fluid ml-2 mr-1 my-2" alt="annota logo">
                 </div>
             </div>
             <div class="col">
                 <!--Issue with the wave graphics blocking these buttons -->
-                <div id="settings-off" style="bottom: auto!important" alt="Settings and doze toggle sidebar">
+                <!-- <div id="settings-off" style="bottom: auto!important" alt="Settings and doze toggle sidebar">
                     <div class="row">
                         <div class="col">
                             <a accesskey="s" href="/settings" data-toggle="tooltip" data-placement="top" title="Settings">
@@ -89,10 +157,13 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </div><img class="graphics blobs" src="static/img/blobs.png"><img class="graphics wave lighter-wave" src="static/img/wave1.png"><img class="graphics wave darker-wave" src="static/img/wave2.png">
+    </div>
+    <img class="graphics blobs" style="z-index:0;" src="static/img/blobs.png">
+    <img class="graphics wave lighter-wave" style="z-index:1;" src="static/img/wave1.png">
+    <img class="graphics wave darker-wave" style="z-index:1;" src="static/img/wave2.png">
     <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
