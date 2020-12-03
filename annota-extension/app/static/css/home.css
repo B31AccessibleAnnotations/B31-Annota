@@ -12,27 +12,32 @@
 
 .icon {
   margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card.last-saved {
   height: 80%;  
-  background-color: #0D1721;
+  background-color: rgba(13, 23, 33, .75);
   border-color: #fff;
-  opacity: 80%;
 }
 
 .card.annota-chat {
   height: 20%;
   background-color: #003241;
   border-color: #fff;
-  opacity: 80%;
+}
+
+.card.annota-logo {
+  height: 20%;
+  background-color: rgba(0, 50, 65, 0.7);
+  border-color: #fff;
 }
 
 .card.favourites-panel {
   height: 60%;
   background-color: #003548;
   border-color: #fff;
-  opacity: 80%;
 }
 
 .card {
