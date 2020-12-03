@@ -85,6 +85,12 @@ window.onload = function() {
 
   // Get the <span> element that closes the modal
   span = document.getElementsByClassName("close")[0];
+  exportButton = document.getElementById("wrapper");
+
+  exportButton.onclick = function() {
+    modal.style.display= "none";
+    parent.window.postMessage("remove", "*");
+  }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
