@@ -77,59 +77,55 @@
         container: document.getElementById('cy'),
         elements: [
             // nodes
-            { data: { id: 'a', classes:"test" },
-                position:
-                {  
-                    x: 100,
-                    y: 500
-                }
-            },
-            { data: { id: 'b' } },
-            { data: { id: 'c' } },
-            { data: { id: 'd' } },
-            { data: { id: 'e' } },
-            { data: { id: 'f' } },
+            { data: { id: 'CBC Article', type:"web" }},
+            { data: { id: 'Bill C-81', type:"web" } },
+            { data: { id: 'Thesis Doc', type:"docx" } },
+            { data: { id: 'Draft1', type:"pdf" } },
+            { data: { id: 'Canadian Charter', type:"web" } },
+            { data: { id: 'Telecommunications Act', type:"pdf" } },
+            { data: { id: 'Canada Transportations Act', type:"pdf" } },
+            { data: { id: 'References', type:"docx" } },
             // edges
             {
                 data: {
                 id: 'ab',
-                source: 'a',
-                target: 'b'
+                source: 'CBC Article',
+                target: 'Bill C-81'
                 }
             },
             {
                 data: {
                 id: 'cb',
-                source: 'c',
-                target: 'b'
+                source: 'Thesis Doc',
+                target: 'Bill C-81'
                 }
             },
             {
                 data: {
-                id: 'ac',
-                source: 'a',
-                target: 'c'
+                id: 'cd',
+                source: 'Thesis Doc',
+                target: 'Draft1'
                 }
             },
             {
                 data: {
                 id: 'ce',
-                source: 'c',
-                target: 'e'
+                source: 'Thesis Doc',
+                target: 'References'
                 }
             },
             {
                 data: {
                 id: 'be',
-                source: 'b',
-                target: 'e'
+                source: 'Bill C-81',
+                target: 'Telecommunications Act'
                 }
             },
             {
                 data: {
-                    id: 'de',
-                    source: 'd',
-                    target: 'f'
+                    id: 'bg',
+                    source: 'Bill C-81',
+                    target: 'Canadian Charter'
                 }
             }
         ],
@@ -147,13 +143,27 @@
                 'background-color': 'white',
                 'background-image': "../static/img/favicon_package/favicon-32x32.png",
                 width: 50,
-                height: 50
+                height: 50,
+                'label': 'data(id)',
+                'color': 'white'
             }
         },
         {
-            selector: '.test',
+            selector: 'node[type="web"]',
             style: {
-                'background-color': 'black',
+                'background-image': "../static/img/url.png",
+            }
+        },
+        {
+            selector: 'node[type="pdf"]',
+            style: {
+                'background-image': "../static/img/pdf.png",
+            }
+        },
+        {
+            selector: 'node[type="docx"]',
+            style: {
+                'background-image': "../static/img/doc.png",
             }
         }
         ],
@@ -185,5 +195,6 @@
       });
     </script>
 </body>
+
 
 </html>
