@@ -10,6 +10,7 @@ if (!location.ancestorOrigins.contains(extensionOrigin)) {
 
     // Grab text if any was selected
     selectionText = getSelectionText();
+    selectionText = selectionText.replace('"', "'");
 
     // Grab parent URL
     parentURL = window.location.href;
