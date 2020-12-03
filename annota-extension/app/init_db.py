@@ -8,12 +8,16 @@ with open('schema.sql') as f:
 cur = connection.cursor()
 
 cur.execute("INSERT INTO files (title, content) VALUES (?, ?)",
-            ('Thesis Bill-C81 Notes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+            ('A Charter Statement also identifies potential justifications...', 'See Charter Article 1')
             )
 
 cur.execute("INSERT INTO files (title, content) VALUES (?, ?)",
-            ('Policy Analysis Study', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ')
+            ('The purpose of the Accessible Canada Act is to benefit all persons...', 'Test annotation.')
             )
+
+cur.execute("INSERT INTO files (title, content) VALUES (?, ?)",
+        ('The Minister of Justice has examined Bill C-81, An Act to ensure a barrier-free Canada ("Accessible Canada Act"), for consistency with the Charter pursuant to her obligation under section 4.1 of the Department of Justice Act. .', 'Department of Justice Act: https://laws-lois.justice.gc.ca/eng/acts/j-2/index.html')
+        )
 
 connection.commit()
 connection.close()
