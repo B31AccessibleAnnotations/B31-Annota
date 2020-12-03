@@ -10,7 +10,7 @@ window.onload = function() {
   modal = document.getElementById("myModal");
 
   // Modify editor text
-  initialText = document.getElementsByClassName("ql-editor")[0];
+  initialText = document.getElementsByClassName("ql-editor")[1];
   initialText.innerHTML = "<p>" + window.name.split("[URLOFPARENT]")[0] + "</p>";
 
   // Add domain URL to reference
@@ -19,19 +19,68 @@ window.onload = function() {
   const element = document.querySelector('.choices');
   const choices = new Choices(element, {
 
+    placeholder: true,
     searchPlaceholderValue: "Search for a document...",
     choices: [
       {
-        value: 'Option 1',
-        label: 'Option 1',
-
+        value: "Select your connection",
+        label: "Select your connection",
+        placeholder: true,
+        selected: true,
       },
       {
-      value: 'Option 2',
-      label: 'Option 2',
-      }
+        label: "PDF",
+        id: 1,
+        choices: [
+          {
+            value: 'CodingAssignment.pdf',
+            label: 'CodingAssignment.pdf',
+          },
+          {
+            value: 'how to win design day.pdf',
+            label: 'how to win design day.pdf',
+          },
+        ],
+      },
+      {
+        label: "Word Documents",
+        id: 2,
+        choices: [
+          {
+            value: 'Book of Thieves.docx',
+            label: 'Book of Thieves.docx',
+          },
+          {
+            value: 'Thesis.docx',
+            label: 'Thesis.docx',
+          },
+        ],
+      },
+      {
+        label: "Webpages",
+        id: 3,
+        choices:[
+          {
+            value: 'reddit.com/how-to-pass-GNG2101',
+            label: 'reddit.com/how-to-pass-GNG2101',
+          },
+          {
+            value: 'https://www.justice.gc.ca/eng/csj-sjc/pl/charter-charte/c81',
+            label: 'https://www.justice.gc.ca/eng/csj-sjc/pl/charter-charte/c81',
+          },
+        ],
+      },
+      {
+        label: "Images",
+        id: 4,
+        choices: [
+          {
+            value: 'lots of cats.png',
+            label: 'lots of cats.png',
+          },
+        ],
+      },
     ]
-
   });
 
   // Get the <span> element that closes the modal

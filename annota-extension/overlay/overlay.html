@@ -38,16 +38,37 @@
               </div>
             </div>
             <div id="column">
+              <div class="text">Your Selection</div>
+              <div id="selection-container">
+                <div id="selection-editor">
+                  <p id="selection-text"></p>
+                  <p><br></p>
+                </div>
+              </div>
+              <div class="text">Tags</div>
               <div id="tags" class="simple-tags" data-simple-tags="add tags here"></div>
               <div id="alert"></div>
+              <div class="text">References</div>
               <textarea id="references" rows="4" cols="58" placeholder="Add your reference here..."></textarea>
               <script src="tags/script.js"></script>
               <script>
                 const tags = new Tags('#tags');
               </script>
+              <div class="text">Document Connection</div>
               <select class="choices"></select>
             </div>
           </div>
+
+          <script>
+            var quill2 = new Quill('#selection-editor', {
+              modules: {
+                toolbar: false
+              },
+              theme: 'snow',
+              bounds: "selection-container",
+              readOnly: true
+            });
+          </script>
 
           <script>
 
@@ -81,7 +102,7 @@
         <div class="modal-footer">
           <div id="wrapper">
             <a class="horizontal">
-              <span class="text">Export</span>
+              <span class="export-text">Export</span>
             </a>
           </div>
         </div>
