@@ -37,19 +37,120 @@
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <div id="select-source" class="dropdown m-1" alt="Select source document dropdown">
-                    <button accesskey="r" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select Source Document
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Alt 1</a>
-                      <a class="dropdown-item" href="#">Alt 2</a>
-                      <a class="dropdown-item" href="#">Alt 3</a>
+                <div class="container-fluid" style="padding: 5rem;">
+                    <div class="settings-gutter">
+                        <h4>Skin Options</h4>
+                        <hr>
+                        <form>
+                            <div class="form-row align-items-center">
+                            <div class="col-auto my-1">
+                                Skin Palette
+                            </div>
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose...</option>
+                                <option value="1">Deuteranomaly</option>
+                                <option value="2">Protanomaly</option>
+                                <option value="3">Tritanomaly</option>
+                                </select>
+                            </div>
+                            <div class="col-auto my-1">
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+                                </div>
+                            </div>
+                            <div class="col-auto my-1">
+                                <form class="md-form">
+                                    <div class="file-field">
+                                    <div class="btn btn-primary btn-sm float-left">
+                                        <span>Choose file</span>
+                                        <input type="file">
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </form>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="container">
-                        <img alt="Substitute image for settings functionality" src="static/img/cat.jpg">
+                    <div class="settings-gutter">
+                        <h4>Font Options</h4>
+                        <hr>
+                        <div class="form-row algin-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Arial
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Calibri
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Century Gothic
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option4" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Helvetica
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Tahoma
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option6">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Verdana
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Audiovisual Options</h4>
+                    <hr>
+                    <div class="settings-gutter">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Hearing enhancements</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Visibility enhancements</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Invert</label>
+                        </div>
+                    </div>
+                    <div class="settings-gutter">
+                        <h4>Accessibility Options</h4>
+                        <hr>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Show transparency</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                            <label class="custom-control-label" for="customSwitch1">Automatically hide scrollbar</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                            <label class="custom-control-label" for="customSwitch1">Show labels</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                            <label class="custom-control-label" for="customSwitch1">Use access keys</label>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -206,6 +206,3 @@
     $('#redo-algorithm').addEventListener('click', applyAlgorithmFromSelect);
   });
 })();
-
-// tooltips with jQuery
-$(document).ready(() => $('.tooltip').tooltipster());
