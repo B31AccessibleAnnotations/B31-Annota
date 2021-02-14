@@ -1,13 +1,8 @@
 # GNG2101 B31 - Annota
+Annota is a virtual productivity environment that centralizes user workflow in the web browser and enables users to visualize, organize, and manage their research projects with a suite of built-in tools. 
 
 :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness: :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip: :low_brightness:
 :mortar_board: :pencil2: :beginner: :memo: :bookmark: :pushpin: :paperclip:
-
-
-## Introduction
-
-A discourse analysis, the study of written or spoken language in relation to its social context, requires taking notes and putting annotations in documents and images to be able to analyze the data. The client for this project, a second year Masters student with a disability and chronic illness, is seeking to perform a discourse analysis of a government bill for her research, but she is not always capable of remembering the documents and what ties the have to other pieces of information. The purpose of this project is to create a way for her to keep a visual timeline of all the annotated and reviewed documents and how the information might flow from one to another.
-
 
 ## Highlighted features (Deliverable B Final Specs :revolving_hearts:)
 
